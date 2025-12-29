@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Điểm danh khuôn mặt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>HỆ THỐNG ĐIỂM DANH KHUÔN MẶT</h1>
+    <div class="search-box">
+      <input id="searchCode" placeholder="Nhập mã định danh để tra cứu" />
+      <button onclick="searchStudent()">🔍 Tìm</button>
+    </div>
+
+    <div id="searchResult" class="search-result"></div>
+
+    <div class="code-box">
+      <input id="code" placeholder="Nhập mã điểm danh (VD: 1112)" />
+      <button onclick="verifyCode()">Xác nhận mã</button>
+    </div>
+
+    <div class="camera-box hidden" id="cameraBox">
+      <video id="video" autoplay></video>
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <div id="status" class="status">Chưa điểm danh</div>
+
+    <button onclick="startAttendance()">📸 Điểm danh ngay</button>
+    <button onclick="loadToday()">📋 Học sinh đã điểm danh</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mã</th>
+          <th>Họ tên</th>
+          <th>Lớp</th>
+          <th>Ngày</th>
+          <th>Giờ</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
